@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>media query</title>
+    <style>
+        /*declarações gerais*/
+             * {
+            margin: 0px;
+             padding: 0px;
+              font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            }
+
+            html, body {
+                width: 100vw;
+                height: 100vh;
+                background-color: #233eff;
+                background-size: contain;
+                background-repeat: no-repeat;
+            }
+
+            h1 {
+                color: white;
+                text-shadow: 3px 3px 0px #111d7a;
+                padding: 10px;
+            }
+        /*declarações retrato*/
+        @media screen and (orientation: portrait) {
+            body {
+                background-image: url(../imagens/cev-portrait.jpg);
+                background-position: center bottom;
+            }
+        }
+        /*declarações paisagem*/
+        @media screen and (orientation: landscape) {
+            body {
+                 background-image: url(../imagens/cev-landscape.jpg);
+                 background-position: left bottom;
+            }
+        }
+    </style>
+</head>
+<!-- quando usando media query, é possivel informar media types (screen,print,etc)
+     e media features (portrait, landscape)-->
+     <!--media features são indicados entre parênteses, ou seja, tres media features, tres pares de parentesses para cada uma0-->
+<body>
+    <h1>
+        mude a orientaçao do seu celular
+    </h1>
+</body>
+</html>
